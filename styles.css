@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  --primary-color: rgb(246, 93, 231);
+  --primary-color-hover: rgb(249, 126, 237);
+  --text-color: gray;
+}
+
+button {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  height: 4rem;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.button-new-note {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-new-note .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.outer-div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1rem;
+}
+
+.left-section {
+  padding: 1rem;
+  border-right: 0.5px solid;
+  overflow: auto;
+  height: 100vh;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.note:hover,
+.selected-note {
+  background-color: rgba(246, 93, 231, 0.1);
+}
+
+.note-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.note-content {
+  color: var(--text-color);
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.note-date {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  justify-self: end;
+  text-align: right;
+}
+
+.right-section {
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.note-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-title {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+.input-note {
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  height: 80vh;
+  outline: none;
+  resize: none;
+}
+
+.buttons-section {
+  display: flex;
+  height: max-content;
+  gap: 1rem;
+}
