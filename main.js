@@ -14,9 +14,9 @@ function saveNote() {
 
   let noteLastId = 0;
 
-  if (JSON.parse(localStorage.getItem("notes")) > 0) {
-    const notesEl = JSON.parse(localStorage.getItem("notes"));
-    noteLastId = notesEl[notesEl.length - 1].id;
+  if (JSON.parse(localStorage.getItem("notes"))[0]) {
+    const notes = JSON.parse(localStorage.getItem("notes"));
+    noteLastId = notes[notes.length - 1].id;
   }
 
   if (noteSectionId) {
